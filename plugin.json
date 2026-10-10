@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "betslip-doctor",
+  "version": "0.2.0",
+  "description": "Grade a sports betslip before you bet, compare posted prices, and read your saved BetSlip Doctor Grades, Doctor answers, History and Tail. 21+, US. Never places bets.",
+  "author": {
+    "name": "Automio LLC"
+  }
+}

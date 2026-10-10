@@ -1,0 +1,68 @@
+# BetSlip Doctor
+
+> BetSlip Doctor (BSD) is a bet slip grader, parlay tracker, bet tracker and sports-pick community (Tail) for iPhone and the web at betslipdoctor.ai. It grades a sports betslip A+ to F- before you bet, from up to 100 research questions, and tracks your record after. It reads, grades, and tracks a user's own tickets; it never places wagers or handles sportsbook credentials.
+
+- BetSlip Doctor (BSD) is an iPhone app and web workspace at betslipdoctor.ai that grades a sports bet slip before you place it.
+- Every Grade is a letter from A+ to F- plus a score out of 100, built from up to 100 research questions in 10 groups.
+- It tracks your slips and your betting history, runs the Tail community where bettors share graded slips, and shows live games and the Doctor’s graded picks.
+- It never places a bet, never holds your sportsbook password and never moves money. Any sportsbook link opens only when you tap it, and you confirm the bet in the sportsbook.
+- For adults of legal betting age in the United States (21+ in most states). Entertainment and decision support, never a guarantee or financial advice.
+
+## Product pages
+
+- [Bet slip grader: grade your parlay before you bet](https://betslipdoctor.ai/bet-slip-grader): BetSlip Doctor grades a sports bet slip or parlay before you place it: a letter from A+ to F-, a score out of 100, and up to 100 cited research questions in 10 groups. First Grade free.
+- [Parlay tracker: every slip, every leg, one place](https://betslipdoctor.ai/parlay-tracker): Track parlays, same-game parlays and singles in BetSlip Doctor: open slips next to live games, true settlement states (push, void, cash out, dead heat), and sportsbook sync.
+- [Bet tracker and betting history: your real record](https://betslipdoctor.ai/bet-tracker): BetSlip Doctor’s History tab is a sports bet tracker: recorded profit and loss, win rate, wins and losses by week, month, quarter or year, sportsbook sync, and CSV export.
+- [Tail community: copy and tail picks with the Grade attached](https://betslipdoctor.ai/tail-community): BetSlip Doctor Tail is a community where bettors post slips with their Grade attached. Tail a slip to copy it, fade it, follow bettors and share a public link.
+- [The BSD grade system: 100 questions, one letter, every source](https://betslipdoctor.ai/grade-system): How BetSlip Doctor turns a bet slip into a letter: 100 sports-record questions in 10 groups, a 100-point score (Value 30, Research 40, Build 20, Stake 10), the A+ to F- letter table and the evidence states.
+- [Live picks, live odds and the Doctor’s graded picks](https://betslipdoctor.ai/live-picks): BetSlip Doctor’s Live tab: in-play and upcoming games across 12 leagues, moneyline, spread and total with the best price across books, and the Doctor’s graded picks you can tail.
+- [Doctor Fix: fix a bad parlay before you bet it](https://betslipdoctor.ai/fix-my-bet-slip): Got a D or F? “Let the Doctor fix it” drops weak legs, swaps in legs the Doctor already graded, or fits your stake, in at most 3 moves, aiming for B- or better.
+- [Send your bet slip to DraftKings or FanDuel](https://betslipdoctor.ai/send-bet-slip-to-sportsbook): Grade the slip in BetSlip Doctor, then open your picks in DraftKings, FanDuel or another book with one tap. You confirm the bet in the sportsbook; BSD never places it.
+- [All features](https://betslipdoctor.ai/features): one page with every feature and the plans.
+- [Pricing](https://betslipdoctor.ai/pricing): Free to start. Starter $9.99/month, Pro $19.99/month, Elite $49.99/month. Annual plans on the web: $89.99, $179.99 and $449.99 a year.
+
+## Compare
+
+- [BetSlip Doctor vs bet tracker apps](https://betslipdoctor.ai/compare/bet-trackers): How BetSlip Doctor compares with sports bet tracker apps: both keep your record; BSD also grades each slip A+ to F before you bet.
+- [BetSlip Doctor vs parlay calculators](https://betslipdoctor.ai/compare/parlay-calculators): A parlay calculator tells you the payout. BetSlip Doctor tells you whether the price and the research hold up, then grades the slip A+ to F.
+- [BetSlip Doctor Tail vs pick-selling communities](https://betslipdoctor.ai/compare/pick-selling-communities): Tail is a pick-sharing community with no paid picks: posts carry their Grade, records need settled bets, and tailing copies a slip you can grade before you place it.
+
+## Agent interfaces
+
+- MCP server: https://api.betslipdoctor.ai/api/mcp
+- OAuth protected-resource metadata: https://api.betslipdoctor.ai/.well-known/oauth-protected-resource
+- OAuth authorization-server metadata: https://api.betslipdoctor.ai/.well-known/oauth-authorization-server
+- Public HTTP API reference: https://api.betslipdoctor.ai/openapi.json
+- Human connection guide: https://api.betslipdoctor.ai/docs/mcp-connect.md
+- Connect page for Claude, ChatGPT, Claude Code and Codex: https://betslipdoctor.ai/agents
+- Public API guide: https://api.betslipdoctor.ai/docs/public-api.md
+
+## Contract
+
+- Current grading contract: 2026-08-19.
+- Tickets are two-level trees. An SGP is one outer pick with child selections.
+- Preserved ticket statuses: Won, Lost, Open, Voided, Cancelled, Cashed Out, Settled, Early Exit, Early Exit Win, Ghost Win.
+- Payout confidence is exact, structural, or unknown. Unsupported sport-rule tails return unknown rather than a guessed grade.
+- Screenshot OCR and manual entry are primary ingest paths. DraftKings has no public slip API; this service does not scrape logged-in My Bets pages.
+
+## Authorization and limits
+
+- Unauthenticated MCP access is discovery only.
+- Agent Connect requires an active Pro or Elite plan.
+- OAuth 2.1 authorization code with PKCE issues 15-minute audience-bound opaque access tokens and rotating refresh tokens.
+- Scopes: slips.read, slips.grade, slips.track, history.read, reports.read, odds.read, doctor.use, tail.read, tail.post.
+- Grants can be revoked by the account owner and suspension is enforced on the next request.
+
+## Safety boundary
+
+- No wager placement, sportsbook credential access, billing changes, or privacy-setting changes.
+- For a user's own saved ticket, the MCP server can prepare a vetted sportsbook handoff link; it opens only on the user's click and never places or records a wager.
+- In ChatGPT, the MCP server renders interactive BetSlip Doctor cards (saved Grade, Doctor conversation, Tail, History, saved slip) from the user's own saved records.
+- Outputs are entertainment and decision support, not financial advice or a guarantee.
+
+## Optional
+
+- [Full text for language models](https://betslipdoctor.ai/llms-full.txt): every feature page, FAQ and plan in one plain-text file.
+- [Methodology](https://betslipdoctor.ai/methodology)
+- [Privacy](https://betslipdoctor.ai/privacy)
+- [Support](https://betslipdoctor.ai/support): support@betslipdoctor.ai

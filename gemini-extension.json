@@ -1,0 +1,11 @@
+{
+  "name": "betslip-doctor",
+  "version": "0.2.0",
+  "description": "Grade a sports betslip before you bet, compare posted prices, and read your saved BetSlip Doctor Grades, Doctor answers, History and Tail. 21+, US. Never places bets.",
+  "mcpServers": {
+    "bsd": {
+      "httpUrl": "https://api.betslipdoctor.ai/api/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "betslip-doctor",
+  "owner": {
+    "name": "Automio LLC",
+    "email": "support@betslipdoctor.ai"
+  },
+  "metadata": {
+    "description": "BetSlip Doctor: grade sports betslips, compare posted prices and read your record from Claude Code."
+  },
+  "plugins": [
+    {
+      "name": "betslip-doctor",
+      "source": "./",
+      "description": "Grade a sports betslip before you bet, compare posted prices, and read your saved BetSlip Doctor Grades, Doctor answers, History and Tail. 21+, US. Never places bets.",
+      "version": "0.2.0"
+    }
+  ]
+}

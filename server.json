@@ -1,0 +1,41 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.betslipdoctor/mcp",
+  "title": "BetSlip Doctor",
+  "description": "Bet slip grader: grade a parlay A+ to F- before you bet, track slips, history and Tail. 21+, US.",
+  "websiteUrl": "https://betslipdoctor.ai/agents",
+  "repository": {
+    "url": "https://github.com/opspot-ai/betslipdoctor-mcp",
+    "source": "github"
+  },
+  "version": "1.3.0",
+  "icons": [
+    {
+      "src": "https://betslipdoctor.ai/web/brand/bsd-mark-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    },
+    {
+      "src": "https://betslipdoctor.ai/web/brand/bsd-mark-192.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "192x192"
+      ]
+    },
+    {
+      "src": "https://betslipdoctor.ai/web/brand/bsd-mark-64.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.betslipdoctor.ai/api/mcp"
+    }
+  ]
+}

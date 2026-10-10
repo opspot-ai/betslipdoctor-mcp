@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "bsd": {
+      "type": "http",
+      "url": "https://api.betslipdoctor.ai/api/mcp"
+    }
+  }
+}
